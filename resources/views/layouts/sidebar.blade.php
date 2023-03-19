@@ -29,7 +29,7 @@
 <!-- Bantuan -->
 <li class="menu-item ">
     <a href="/bantuan" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-home-circle"></i>
+        <i class="menu-icon tf-icons bx bx-crown"></i>
         <div data-i18n="Analytics">Bantuan</div>
     </a>
 </li>
@@ -37,7 +37,7 @@
 
 <li class="menu-item ">
     <a href="/donatur" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-home-circle"></i>
+        <i class="menu-icon tf-icons bx bx-cube-alt"></i>
         <div data-i18n="Analytics">Donatur</div>
     </a>
 </li>
@@ -45,12 +45,12 @@
 
 <li class="menu-item ">
     <a href="/jenis-bantuan" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-home-circle"></i>
+        <i class="menu-icon tf-icons bx bx-collection"></i>
         <div data-i18n="Analytics">Jenis Bantuan</div>
     </a>
 </li>
 
-<li class="menu-item">
+{{-- <li class="menu-item">
     <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-layout"></i>
         <div data-i18n="Settings">Settings</div>
@@ -83,7 +83,7 @@
             </a>
         </li>
     </ul>
-</li>
+</li> --}}
 
 
 
@@ -96,7 +96,7 @@
 <!-- Penerima -->
 <li class="menu-item ">
     <a href="/penerima" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-home-circle"></i>
+        <i class="menu-icon tf-icons bx bx-copy"></i>
         <div data-i18n="Analytics">Penerima</div>
     </a>
 </li>
@@ -104,7 +104,7 @@
 <li class="menu-item">
     <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-layout"></i>
-        <div data-i18n="Settings">Penerima</div>
+        <div data-i18n="Settings">Setting</div>
     </a>
 
     <ul class="menu-sub">
@@ -127,7 +127,21 @@
 
 
 
+
+
+
+
+
     </ul>
+    <li class="menu-item ">
+        <form action="/logout" method="POST" class="dropdown-item">
+            @csrf
+            <button type="submit" class="border-0 bg-white">
+        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+        Logout
+    </button>
+</form>
+    </li>
 </li>
 </ul>
 </aside>

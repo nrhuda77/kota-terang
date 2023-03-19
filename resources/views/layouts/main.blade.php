@@ -143,7 +143,7 @@ data-template="vertical-menu-template-free"
                                <div class="card-body">
                                    <div class="row">
                                        <div class="col-7">
-                                           <h2 class="text-primary">Bantuan</h2>
+                                           <h2 class="text-primary">Admin Kota Terang</h2>
                                        </div>
 
                                     @yield('container')

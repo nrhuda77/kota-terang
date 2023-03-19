@@ -1,20 +1,21 @@
 <?php
 
+use App\Models\Bantuan;
+use App\Models\DonaturActive;
 use App\Models\SubjectDonatur;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BantuanController;
 use App\Http\Controllers\DonaturController;
+use App\Http\Controllers\PenerimaController;
+use App\Http\Controllers\TemplateController;
+use App\Http\Controllers\KecamatanController;
+use App\Http\Controllers\KelurahanController;
+use App\Http\Controllers\KemungkinanController;
+use App\Http\Controllers\JenisBantuanController;
 use App\Http\Controllers\DetailBantuanController;
 use App\Http\Controllers\DonaturActiveController;
 use App\Http\Controllers\SubjectDonaturController;
-use App\Http\Controllers\TemplateController;
-use App\Http\Controllers\KemungkinanController;
-use App\Http\Controllers\KecamatanController;
-use App\Http\Controllers\KelurahanController;
-use App\Http\Controllers\PenerimaController;
-use App\Http\Controllers\JenisBantuanController;
-use App\Models\DonaturActive;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,15 +28,23 @@ use App\Models\DonaturActive;
 |
 */
 
+Route::get('/', function(){
+    return view('public.index',[
+        'bantuan' => Bantuan::all()
+        ]);
+})->middleware('guest');
 
 
-Route::get('/', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::get('/dashboard', function(){
+    return view('dashboard.index');
+})->middleware('auth');
+
+
+Route::get('sign', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/home', function(){
-    return view('index');
-})->middleware('auth');
+
 
 Route::resource('/bantuan', BantuanController::class)->middleware('auth');
 Route::resource('/donatur', DonaturController::class)->middleware('auth');

@@ -134,11 +134,11 @@ class DetailBantuanController extends Controller
         foreach($detail_bantuan as $db){
 
 
-            $pesan="tes";
+            $pesan=$bantuan->text_wa;
 		$penerima = Penerima::where(['id' => $db->penerima_id])->first();
         $nohp = $penerima->nohp;
     // $file ="http://kota-terang.test/storage/".$bantuan->gambar;
-        $file ='http://kota-terang.test/public/storage/post-images/9aK5SS0L5rVaHBOYQVMyCJkryaqKXkjtGnk4oRpi.jpg';
+        $file ='https://cdn1-production-images-kly.akamaized.net/Lp4ZMNdzQ89iphOeDwpz1A0UV5g=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2703835/original/060532300_1547463460-macam-macam_bencana_alam.jpg';
 
         $curl = curl_init();
 

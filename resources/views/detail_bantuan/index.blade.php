@@ -36,7 +36,7 @@
 
 
 
-    <button type="submit">gt</button>
+    <button class="btn btn-light" type="submit"><i class="fa-brands fa-square-whatsapp"></i> Send WA </button>
 </form>
 </div>
 </div>

@@ -24,12 +24,12 @@
 </div>
 @endif
 
-<h1 class="mb-3 text-center">Data Kemiskinan</h1>
-
-<section class="content table-responsive">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Tambah Data
-    </button>
+{{-- <h1 class="mb-3 text-center">Data Kemiskinan</h1> --}}
+<div class="col-5 text-end">
+    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="far fa-plus"></i> Tambah</button>
+    {{-- <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModalList"><i class="far fa-plus"></i> List</button> --}}
+</div>
+</div>
     <table class="table table-striped ">
         <thead>
             <tr>
